@@ -1,0 +1,54 @@
+:root {
+  --sky: #6BB8FF;
+  --sky-dark: #11202E;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #52A2B4;
+}
+#cloud {
+  fill: white;
+}
+#ear1,#ear2{
+  fill: #222;
+  animation :listening 1s infinite both ;
+  animation-direction: alternate-reverse;
+}
+#moon{
+  transform: translate(0,300px);
+
+}
+*{
+  transition: all 1.5s;
+}
+#shine2,#shine1{
+  
+  animation :shine 1s infinite both ;
+  animation-direction: alternate-reverse;
+}
+#star-group{
+  opacity: 0;
+}
+@keyframes listening{
+  from {
+  transform: translate(0,0);
+
+  }to{
+  transform: translate(7px,0) rotate(1deg);
+
+  }
+}
+@keyframes shine{
+  from {
+    fill-opacity: 0.4;
+
+  }to{
+    fill-opacity: 0.2;
+  }
+}
